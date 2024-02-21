@@ -1,0 +1,44 @@
+
+
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+  <label for="id">ID:</label>
+  <input type="number" id="id" formControlName="id" required>
+
+  <label for="name">Nombre:</label>
+  <input type="text" id="name" formControlName="name" required>
+
+  <label for="department">Departamento:</label>
+  <input type="text" id="department" formControlName="department" required>
+
+  <label for="newProperty">Salario:</label>
+  <input type="text" id="salary" formControlName="salary" required>
+
+  <label for="newProperty">Nueva Propiedad:</label>
+  <input type="text" id="newProperty" formControlName="newProperty" required>
+
+  <button type="submit" [disabled]="!isButtonEnabled">Subir</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Departamento</th>
+      <th>Salario</th>
+      <th>Nueva Propiedad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{ employee.id }}</td>
+      <td>{{ employee.name }}</td>
+      <td>{{ employee.department }}</td>
+      <td>{{ employee.salary }}</td>
+      <td>{{ employee.newProperty }}</td>
+    </tr>
+  </tbody>
+  <a (click)="navigateToEmployeeDetails()">Detalles</a>
+</table>
+
+

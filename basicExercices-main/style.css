@@ -1,0 +1,14 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.fail {
+    color: red;
+  }
+  
+  .excellent {
+    color: blue;
+  }
+  
+  .pass {
+    color: green;
+  }
+  
